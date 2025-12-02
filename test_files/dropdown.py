@@ -12,7 +12,7 @@ with sync_playwright() as p:
     page.check('//input[@value="Male"]')
 
     #checkbox
-    page.query_selector('//input[@id="checkbox1"]').click()
+    page.locator('//input[@id="checkbox1"]').click()
     page.check('//input[@id="checkbox2"]')
 
     # page.wait_for_timeout(15000)
