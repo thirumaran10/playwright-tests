@@ -12,7 +12,7 @@ with sync_playwright() as p:
     page.wait_for_selector('//a[text() = "SwitchTo"]').hover()
     #click on element
     page.wait_for_selector('//a[text() = "Windows"]').click()
-    #Double click on element
+    #Double click on element we use- db1click()
     page.wait_for_selector('//button[@onclick="newwindow()"]').dblclick()
     #Right click on element
     page.wait_for_selector('//button[@onclick="newwindow()"]').click(button="right")
