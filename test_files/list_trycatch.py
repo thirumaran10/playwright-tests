@@ -19,9 +19,9 @@ with sync_playwright() as p:
         page.wait_for_timeout(5000)
 
         #intentionally causing an exception
-        page.query_selector('//a[@href="#/Link1"]').click()
+        page.locator('//a[@href="#/Link1"]').click()
 
-        #getting all the links in a page
+        #getting all the links in a page, query_selector was cant able to use directly using variable only it can be used
         elements = page.query_selector_all('a')
         print("Total links are:", len(elements))
 
