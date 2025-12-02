@@ -11,7 +11,7 @@ with sync_playwright() as p:
     #direct child of xpath use /
     #control alert
     page.once("dialog",lambda dialog: dialog.accept())
-    page.query_selector('//div[@id="OKTab"]/button').click()
+    page.locator('//div[@id="OKTab"]/button').click()
 
     page.query_selector('//a[@href="#CancelTab"]').click()
 
