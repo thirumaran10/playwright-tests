@@ -7,7 +7,7 @@ with sync_playwright() as p:
     page.wait_for_load_state("networkidle")   # wait until full load
 
     #alert with OK
-    page.query_selector("//a[text() = 'Alert with OK ']").click()
+    page.locator("//a[text() = 'Alert with OK ']").click()
     #direct child of xpath use /
     #control alert
     page.once("dialog",lambda dialog: dialog.accept())
