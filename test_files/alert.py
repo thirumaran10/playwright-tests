@@ -22,7 +22,7 @@ with sync_playwright() as p:
     
     page.locator('//button[@onclick="confirmbox()"]').click()
 
-    page.query_selector('//a[@href="#Textbox"]').click()
+    page.locator('//a[@href="#Textbox"]').click()
     page.query_selector('//button[@onclick="promptbox()"]').click()
     #alert with textbox
     page.once("dialog",lambda dialog : dialog.text == "TestUser" and dialog.accept())
