@@ -20,7 +20,7 @@ with sync_playwright() as p:
     page.once("dialog",lambda dialog : (print("Alert with pressed button:", dialog.message), 
                                         dialog.dismiss(), print("Alert cancelled")))
     
-    page.query_selector('//button[@onclick="confirmbox()"]').click()
+    page.locator('//button[@onclick="confirmbox()"]').click()
 
     page.query_selector('//a[@href="#Textbox"]').click()
     page.query_selector('//button[@onclick="promptbox()"]').click()
