@@ -20,7 +20,7 @@ with sync_playwright() as p:
     page.once("dialog",lambda dialog: dialog.accept())
     page.locator('//div[@id="OKTab"]/button').click()
 
-    page.query_selector('//a[@href="#CancelTab"]').click()
+    page.locator('//a[@href="#CancelTab"]').click()
 
     #alert with cancel and print the text of alert
     
