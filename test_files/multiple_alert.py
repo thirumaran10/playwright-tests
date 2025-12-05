@@ -26,7 +26,7 @@ with sync_playwright() as p:
     
     page.once("dialog",handle_dialog)
     
-    page.query_selector('//button[@onclick="confirmbox()"]').click()
+    page.locator('//button[@onclick="confirmbox()"]').click()
 
     page.wait_for_timeout(5000)
     browser.close()
