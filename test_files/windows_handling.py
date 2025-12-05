@@ -7,7 +7,7 @@ with sync_playwright() as p:
     page.goto('https://demo.automationtesting.in/Windows.html')
     page.wait_for_load_state("networkidle")   
 
-    page.query_selector('//a[@target="_blank"]/button').click()
+    page.locator('//a[@target="_blank"]/button').click()
     page.wait_for_timeout(5000)
 
     #How to find the total pages
