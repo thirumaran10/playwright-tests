@@ -1,7 +1,6 @@
 import pytest
 from playwright.sync_api import sync_playwright
 
-
 class TestTitle:
     def test_google(self,page): 
         page.goto("https://www.google.com") 
